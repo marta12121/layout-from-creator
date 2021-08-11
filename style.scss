@@ -1,0 +1,1182 @@
+@import "variables";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,600,400&display=swap');
+body {
+    background-color: $dark-background-color;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+}
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.brand-name {
+    flex-direction: row;
+    color: $light-text-color;
+    font-size: map-get($map: $font-size1, $key: small);
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.1px;
+}
+
+#navbar-nav {
+    li {
+        list-style-type: none;
+        a {
+            text-decoration: none;
+            color: $light-text-color;
+        }
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    #container {
+        @include links-location;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 20px;
+        .brand-name {
+            color: $light-text-color;
+            font-size: map-get($map: $font-size1, $key: small);
+            font-weight: 600;
+            line-height: 32px;
+            letter-spacing: 0.1px;
+            width: 187px;
+        }
+        .icons {
+            visibility: hidden;
+        }
+        #navbar-nav {
+            display: flex;
+            flex-direction: row;
+            position: relative;
+            padding: 15px;
+            margin-left: -50px;
+            gap: 21px;
+            li {
+                list-style-type: none;
+                a {
+                    text-decoration: none;
+                    color: $light-text-color;
+                    font-size: map-get($map: $font-size2, $key: small);
+                }
+            }
+        }
+    }
+    .buttons-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 15px 25px;
+        position: absolute;
+        width: 300px;
+        height: 52px;
+        right: 50px;
+        .btn-login {
+            color: $primary-color;
+            background-color: transparent;
+            border: none;
+            font-size: map-get($map: $font-size2, $key: small);
+            font-weight: bold;
+            cursor: pointer;
+            position: absolute;
+            width: 41px;
+            height: 22px;
+            left: 0px;
+            top: 30px;
+        }
+        .btn-registr {
+            color: $light-text-color;
+            background-color: $primary-color;
+            font-size: map-get($map: $font-size2, $key: small);
+            font-weight: bold;
+            width: 214px;
+            height: 52px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            position: absolute;
+            width: 214px;
+            height: 52px;
+            left: 76px;
+            top: 15px;
+        }
+    }
+    .container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+        h1 {
+            font-size: map-get($map: $font-size1, $key: large);
+            font-weight: 800;
+            line-height: 80px;
+            letter-spacing: 0.2px;
+        }
+        h4 {
+            font-size: map-get($map: $font-size2, $key: large);
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+        }
+        .c-t-b1 {
+            width: 185px;
+            height: 52px;
+            left: 0px;
+            top: 0px;
+            background: $primary-color;
+            color: $light-text-color;
+            font-weight: bold;
+            border: none;
+            border-radius: 37px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+        .c-t-b2 {
+            width: 154px;
+            height: 52px;
+            left: 195px;
+            top: 0px;
+            background-color: transparent;
+            color: $light-text-color;
+            font-weight: bold;
+            border: 1px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 37px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+    }
+    .features-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 80px;
+            letter-spacing: 0.2px;
+            margin: 10px 0px;
+        }
+        p {
+            font-size: map-get($map: $font-size2, $key: small);
+            color: $second-text-color;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+        }
+    }
+    .features-2-blocks {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(3, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 30px 30px;
+        grid-template-areas: "f2-block-1 f2-block-1 f2-block-1" "f2-block-1 f2-block-1 f2-block-1";
+        .f2-block-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 330px;
+            height: 140px;
+            border: 1px solid #F2F2F2;
+            border-radius: 2px;
+            text-align: center;
+            .f2-img {
+                background-image: url("images/vector.png");
+                position: relative;
+                left: -19px;
+                width: 49.33px;
+                height: 39px;
+            }
+            .f2-text {
+                display: flex;
+                flex-direction: column;
+                h5 {
+                    font-size: map-get($map: $font-size2, $key: normal);
+                    font-weight: bold;
+                    margin: 0px;
+                    position: absolute;
+                }
+                p {
+                    font-size: map-get($map: $font-size2, $key: small);
+                    color: $light-text-color;
+                    font-weight: 500;
+                    margin: 0px;
+                    position: relative;
+                    padding-top: 50px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        text-align: center;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0px;
+        }
+        p {
+            font-weight: 500;
+            font-size: map-get($map: $font-size2, $key: small);
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+        .t-posters {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+        .t-p-2 {
+            background-color: $light-text-color;
+            display: flex;
+            flex-direction: row;
+            width: 500px;
+            .t-p-2-text {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                .stars {
+                    margin: 5px;
+                    margin-left: 20px;
+                }
+                h3 {
+                    color: $text-color;
+                    margin: 5px;
+                    margin-left: 20px;
+                    text-align: left;
+                }
+                h6 {
+                    color: $second-text-color;
+                    margin: 5px;
+                    margin-left: 20px;
+                }
+                p {
+                    color: $second-text-color;
+                    text-align: left;
+                    margin-left: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            text-align: center;
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0px;
+        }
+        p {
+            text-align: center;
+            font-weight: 500;
+            font-size: map-get($map: $font-size2, $key: small);
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+        .about-v {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            .about-img {
+                width: 590px;
+                height: 440px;
+            }
+            .about-img-pin {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                left: -348px;
+                top: -175px;
+            }
+        }
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            .about-img1 {
+                width: 32px;
+                height: 32px;
+            }
+            .about-img2 {
+                width: 32px;
+                height: 32px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            p {
+                text-align: left;
+                font-size: 14px;
+                margin-top: 0px;
+            }
+            .about-ul-1 {
+                list-style-image: url('images/icn settings .icn-md.png');
+            }
+            .about-ul-2 {
+                list-style-image: url('images/icn settings .icn-md2.png');
+            }
+        }
+    }
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+        }
+        p {
+            font-size: map-get($map: $font-size2, $key: small);
+            font-weight: 500;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pricing-container {
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            margin-top: 50px;
+            .block-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-text-color;
+                border: 1px solid #DEDEDE;
+                box-sizing: border-box;
+                border-radius: 10px;
+                width: 330px;
+                h3 {
+                    margin-top: 50px;
+                    color: $text-color;
+                    text-align: center;
+                }
+                h5 {
+                    color: $second-text-color;
+                    text-align: center;
+                    line-height: 24px;
+                }
+                h2 {
+                    color: $primary-color;
+                    text-align: center;
+                    margin-bottom: -30px;
+                }
+                .per-month {
+                    color: $disabled-element-color;
+                    text-align: center;
+                }
+                .pricing-btn {
+                    background-color: $primary-color;
+                    border: none;
+                    color: $light-text-color;
+                    font-weight: bold;
+                    position: static;
+                    height: 52px;
+                    width: 206px;
+                    left: 80.5px;
+                    right: 90.5px;
+                    top: 316px;
+                    border-radius: 5px;
+                    align-items: center;
+                }
+                .pricing-green {
+                    list-style-image: url('images/green.png');
+                    color: $text-color;
+                    font-weight: bold;
+                    font-size: 14px;
+                    list-style-type: circle;
+                }
+                .pricing-grey {
+                    list-style-image: url('images/grey.png');
+                    color: $text-color;
+                    font-weight: bold;
+                    margin-top: -16px;
+                    margin-left: 25px;
+                    font-size: 14px;
+                }
+                .block-1-img {
+                    position: absolute;
+                    top: 2960px;
+                    left: 740px;
+                }
+            }
+        }
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-width: 1100px;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            font-size: 40px;
+            line-height: 57px;
+        }
+        p {
+            text-align: center;
+            line-height: 20px;
+        }
+        .contact-blocks {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            h6 {
+                margin-top: 5px;
+                color: $text-color;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                line-height: 34px;
+            }
+            h5 {
+                color: $text-color;
+                font-weight: bold;
+                font-size: 16px;
+                letter-spacing: 0.1px;
+                margin-top: 1px;
+            }
+            .c-b1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-text-color;
+                width: 328px;
+                height: 343px;
+                .contact-btn {
+                    border: 1px solid $primary-color;
+                    box-sizing: border-box;
+                    border-radius: 37px;
+                    width: 192px;
+                    height: 54px;
+                    background-color: transparent;
+                    color: $primary-color;
+                }
+            }
+            .c-b2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                width: 328px;
+                height: 403px;
+                .contact-btn {
+                    border: 1px solid $light-text-color;
+                    box-sizing: border-box;
+                    border-radius: 37px;
+                    width: 192px;
+                    height: 54px;
+                    background-color: transparent;
+                    color: $light-text-color;
+                }
+            }
+        }
+    }
+    #footer-container {
+        @include links-location;
+        color: $light-text-color;
+        .footer-cont1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: baseline;
+            .footer-social {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+        .footer-cont2 {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            .col-1 {
+                list-style-type: none;
+                h5 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                .f-inp {
+                    width: 231px;
+                    height: 54px;
+                    border-radius: 5px;
+                    border: 1px solid #E6E6E6;
+                }
+                .f-btn {
+                    border-radius: 0px 5px 5px 0px;
+                    background: #23A6F0;
+                    border: 1px solid #E6E6E6;
+                    box-sizing: border-box;
+                    color: white;
+                    height: 58px;
+                    margin-left: -7px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 320px)and( max-width: 1100px) {
+    #container {
+        display: flex;
+        @include links-location;
+        .icons {
+            visibility: visible;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            height: 23px;
+            gap: 15px;
+            position: absolute;
+            right: 0px;
+            top: 39px;
+            button {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+            }
+        }
+        .brand-name {
+            flex-direction: row;
+            color: $light-text-color;
+            font-size: map-get($map: $font-size1, $key: small);
+            font-weight: 600;
+            line-height: 32px;
+            letter-spacing: 0.1px;
+            position: absolute;
+            width: 145px;
+            height: 32px;
+            left: 30px;
+            top: 13px;
+        }
+        .buttons-container {
+            visibility: hidden;
+        }
+        #navbar-nav {
+            display: flex;
+            flex-direction: column;
+            margin-top: 80px;
+            width: 123px;
+            height: 270px;
+            margin-left: -30px;
+            top: calc(50% - 270px/2 + 33px);
+        }
+        .nav-wrap li {
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 30px;
+            line-height: 45px;
+            text-align: center;
+            letter-spacing: 0.2px;
+            display: block;
+        }
+        .nav-wrap #navbar-nav {
+            display: block;
+        }
+    }
+    .container-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+        h1 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+        }
+        h4 {
+            font-size: map-get($map: $font-size2, $key: large);
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            line-height: 30px;
+        }
+        .c-t-b1 {
+            width: 185px;
+            height: 52px;
+            left: 0px;
+            top: 0px;
+            background: $primary-color;
+            color: $light-text-color;
+            font-weight: bold;
+            border: none;
+            border-radius: 37px;
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+        .c-t-b2 {
+            width: 154px;
+            height: 52px;
+            left: 195px;
+            top: 0px;
+            background-color: transparent;
+            color: $primary-color;
+            font-weight: bold;
+            border: 1px solid $primary-color;
+            box-sizing: border-box;
+            border-radius: 37px;
+            flex: none;
+            order: 1;
+            flex-grow: 0;
+            margin: 0px 10px;
+        }
+    }
+    .features-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        line-height: 80px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 10px 0px;
+        }
+        p {
+            font-size: map-get($map: $font-size2, $key: small);
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            line-height: 20px;
+        }
+    }
+    .features-2-blocks {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+        grid-template-rows: repeat(6, 2fr);
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        gap: 30px 30px;
+        grid-template-areas: "f2-block-1" "f2-block-1" "f2-block-1" "f2-block-1" "f2-block-1" "f2-block-1";
+        .f2-block-1 {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 330px;
+            height: 140px;
+            border: 1px solid #F2F2F2;
+            border-radius: 2px;
+            text-align: center;
+            .f2-img {
+                background-image: url("images/sett.png");
+                position: relative;
+                left: -30px;
+                width: 50px;
+                height: 49px;
+            }
+            .f2-text {
+                display: flex;
+                flex-direction: column;
+                h5 {
+                    font-size: map-get($map: $font-size2, $key: normal);
+                    font-weight: bold;
+                    margin: 0px;
+                    position: absolute;
+                }
+                p {
+                    font-size: map-get($map: $font-size2, $key: small);
+                    color: $light-text-color;
+                    font-weight: 500;
+                    margin: 0px;
+                    position: relative;
+                    padding-top: 50px;
+                    text-align: left;
+                }
+            }
+        }
+    }
+    .testimonials {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        text-align: center;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0px;
+        }
+        p {
+            font-weight: 500;
+            font-size: map-get($map: $font-size2, $key: small);
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+        .t-posters {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .t-p-2 {
+            background-color: $light-text-color;
+            display: flex;
+            flex-direction: column;
+            width: 330px;
+            height: 600px;
+            .user {
+                margin-top: -50px;
+                -webkit-clip-path: inset(50px 0 50px 0);
+                -moz-clip-path: inset(50px 0 50px 0);
+                -o-clip-path: inset(50px 0 50px 0);
+                clip-path: inset(50px 0 50px 0);
+            }
+            .t-p-2-text {
+                margin-top: -20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                .stars {
+                    margin: 5px;
+                    margin-left: 20px;
+                }
+                h3 {
+                    color: $text-color;
+                    margin: 5px;
+                    margin-left: 20px;
+                    text-align: left;
+                }
+                h6 {
+                    color: $second-text-color;
+                    margin: 5px;
+                    margin-left: 20px;
+                }
+                p {
+                    color: $second-text-color;
+                    text-align: left;
+                    margin-left: 20px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            text-align: center;
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+            letter-spacing: 0.2px;
+            margin: 0px;
+        }
+        p {
+            text-align: center;
+            font-weight: 500;
+            font-size: map-get($map: $font-size2, $key: small);
+            line-height: 20px;
+            text-align: center;
+            letter-spacing: 0.2px;
+        }
+        .about-v {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            .about-img {
+                width: 333px;
+                height: 442px;
+            }
+            .about-img-pin {
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
+                position: relative;
+                left: 126px;
+                top: -309px;
+            }
+        }
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: -90px;
+            .about-img1 {
+                width: 32px;
+                height: 32px;
+            }
+            .about-img2 {
+                width: 32px;
+                height: 32px;
+            }
+            h3 {
+                font-size: 40px;
+                letter-spacing: 0.2px;
+            }
+            p {
+                text-align: left;
+                font-size: 14px;
+                margin-top: 0px;
+            }
+            .about-ul-1 {
+                list-style-image: url('images/1.png');
+            }
+            .about-ul-2 {
+                list-style-image: url('images/2.png');
+            }
+            h6 {
+                font-weight: 600;
+            }
+        }
+    }
+    #pricing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            font-size: map-get($map: $font-size1, $key: normal);
+            font-weight: bold;
+            line-height: 57px;
+        }
+        p {
+            font-size: map-get($map: $font-size2, $key: small);
+            font-weight: 500;
+            text-align: center;
+            line-height: 20px;
+        }
+        .pricing-container {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-top: 50px;
+            .block-1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-text-color;
+                border: 1px solid #DEDEDE;
+                box-sizing: border-box;
+                border-radius: 10px;
+                width: 330px;
+                h3 {
+                    margin-top: 50px;
+                    color: $text-color;
+                    text-align: center;
+                }
+                h5 {
+                    color: $second-text-color;
+                    text-align: center;
+                    line-height: 24px;
+                }
+                h2 {
+                    color: $primary-color;
+                    text-align: center;
+                    margin-bottom: -30px;
+                }
+                .per-month {
+                    color: $disabled-element-color;
+                    text-align: center;
+                }
+                .pricing-btn {
+                    background-color: $primary-color;
+                    border: none;
+                    color: $light-text-color;
+                    font-weight: bold;
+                    position: static;
+                    height: 52px;
+                    width: 206px;
+                    left: 80.5px;
+                    right: 90.5px;
+                    top: 316px;
+                    border-radius: 5px;
+                    align-items: center;
+                }
+                .pricing-green {
+                    list-style-image: url('images/green.png');
+                    color: $text-color;
+                    font-weight: bold;
+                    font-size: 14px;
+                    list-style-type: circle;
+                }
+                .pricing-grey {
+                    list-style-image: url('images/grey.png');
+                    color: $text-color;
+                    font-weight: bold;
+                    margin-top: -16px;
+                    margin-left: 25px;
+                    font-size: 14px;
+                }
+                .block-1-img {
+                    position: absolute;
+                    top: 6560px;
+                    left: 310px;
+                }
+            }
+        }
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        left: 20px;
+        top: 0px;
+        flex-grow: 0;
+        margin: 40px;
+        padding: 40px;
+        color: $light-text-color;
+        h2 {
+            font-size: 40px;
+            line-height: 57px;
+        }
+        p {
+            text-align: center;
+            line-height: 20px;
+            color: $second-text-color;
+        }
+        .contact-blocks {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            align-content: center;
+            gap: 30px;
+            h6 {
+                margin-top: 5px;
+                color: $text-color;
+                font-weight: 600;
+                font-size: 14px;
+                letter-spacing: 0.2px;
+                line-height: 34px;
+            }
+            h5 {
+                color: $text-color;
+                font-weight: bold;
+                font-size: 16px;
+                letter-spacing: 0.1px;
+                margin-top: 1px;
+            }
+            .c-b1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $light-text-color;
+                width: 328px;
+                height: 343px;
+                .contact-btn {
+                    border: 1px solid $primary-color;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    width: 192px;
+                    height: 54px;
+                    background-color: transparent;
+                    color: $primary-color;
+                }
+            }
+            .c-b2 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                width: 328px;
+                height: 403px;
+                .contact-btn {
+                    border: 1px solid $light-text-color;
+                    box-sizing: border-box;
+                    border-radius: 5px;
+                    width: 192px;
+                    height: 54px;
+                    background-color: transparent;
+                    color: $light-text-color;
+                }
+            }
+        }
+    }
+    #footer-container {
+        @include links-location;
+        color: $light-text-color;
+        .footer-cont1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: baseline;
+            .footer-social {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+        }
+        .footer-cont2 {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            .col-1 {
+                list-style-type: none;
+                h5 {
+                    font-size: 16px;
+                }
+                p {
+                    font-size: 14px;
+                }
+                .components {
+                    display: flex;
+                    flex-direction: row;
+                    .f-inp {
+                        width: 201px;
+                        height: 50px;
+                        border-radius: 5px;
+                        border: 1px solid #E6E6E6;
+                    }
+                    .f-btn {
+                        border-radius: 0px 5px 5px 0px;
+                        background: #23A6F0;
+                        border: 1px solid #E6E6E6;
+                        box-sizing: border-box;
+                        color: white;
+                        height: 54px;
+                        margin-left: -7px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+$dark-background-color: #252B42;
+$text-color:#252B42;
+$light-text-color:#FFFFFF;
+$second-text-color:#737373;
+$primary-color:#23A6F0;
+$success-color:#2DC071;
+$muted-color:#BDBDBD;
+$alert-color:#E77C40;
+$secondary:#F3CD03;
+$disabled-element-color:#8EC2F2;
+$font-style1:'Montserrat',
+sans-serif;
+$font-size1:('small':24px, 'normal':40px, 'large':50px);
+$font-size2:('small':14px, 'normal':16px, 'large':20px);
+@mixin box-sizes {
+    position: static;
+    width: 332px;
+    height: 248.01px;
+    left: calc(50% - 332px/2 + 89px);
+    top: 0px;
+}
+
+@mixin links-location {
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-left: 59px;
+    padding-right: 59px;
+}
